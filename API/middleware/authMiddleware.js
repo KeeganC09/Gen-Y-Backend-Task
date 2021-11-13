@@ -23,16 +23,6 @@ const isLoggedIn = (req, res, next) => {
     next();
 }
 
-const isUser = (req, res, next) => {
-    if (req.user.admin === true) {
-        return res.status(403).json({
-            success: false,
-            message: "Access Forbidden."
-        });
-    }
-    next();
-}
-
 const isAdmin = (req, res, next) => {
     if (req.user.admin != true) {
         return res.status(403).json({
@@ -43,9 +33,7 @@ const isAdmin = (req, res, next) => {
     next();
 }
 
-
 module.exports = {
     isLoggedIn,
-    isUser,
     isAdmin
 }

@@ -13,6 +13,6 @@ const {
 } = require('../middleware/authMiddleware');
 
 router.post('/', isLoggedIn, isAdmin, addPost);
-router.get('/', isLoggedIn, isUser, getPost);
+router.get('/', isLoggedIn, getPost);
 
 module.exports = router;
