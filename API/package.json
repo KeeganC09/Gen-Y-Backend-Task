@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "Keegan Colaco",
   "license": "ISC",
   "dependencies": {
@@ -16,5 +20,8 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.12"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
